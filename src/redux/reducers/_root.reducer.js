@@ -12,5 +12,8 @@ const rootReducer = combineReducers({
   errors, // contains registrationMessage and loginMessage
   user, // will have an id and username if someone is logged in
 });
-
+//to access these in the code I guess we'll do this. 
+//this.props.store.errors.loginMessage
 export default rootReducer;
+
+//In this file is where the actual reudcers get registered with the app, after being imported above.

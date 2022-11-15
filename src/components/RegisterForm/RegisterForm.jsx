@@ -29,7 +29,7 @@ function RegisterForm() {
       )}
       <div>
         <label htmlFor="username">
-          Username:
+          Username/Alias:
           <input
             type="text"
             name="username"
@@ -59,3 +59,5 @@ function RegisterForm() {
 }
 
 export default RegisterForm;
+
+//They make these forms seperate components so you can move it to different places.

@@ -17,3 +17,5 @@ export default function* rootSaga() {
     userSaga(),
   ]);
 }
+
+//In this file is where the actual sagas get registered with the app, after being imported above.

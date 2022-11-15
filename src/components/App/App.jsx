@@ -53,7 +53,7 @@ function App() {
             If the user is not logged in, the ProtectedRoute will show the LoginPage (component).
             Even though it seems like they are different pages, the user is always on localhost:3000/user */}
           <ProtectedRoute
-            // logged in shows UserPage else shows LoginPage
+            // logged in shows UserPage else shows LoginPage//
             exact
             path="/user"
           >
@@ -103,16 +103,16 @@ function App() {
             {user.id ?
               // If the user is already logged in, 
               // redirect them to the /user page
-              <Redirect to="/user" />
-              :
+              <Redirect to="/user" />               //This means it can say /user at the url and but be at /home, because of this redirect and etc for the above pages^^
+              :                                    //This also means when you're logged in and go to the /registration and /login route it'll direct you to the /user route, which they coded above.
               // Otherwise, show the Landing page
               <LandingPage />
             }
           </Route>
 
-          {/* If none of the other routes matched, we will show a 404. */}
+          {/* If none of the other routes matched like /home, we will show a 404. */}
           <Route>
-            <h1>404</h1>
+            <h1>We can't seem to find what you're looking for, sorry!</h1>
           </Route>
         </Switch>
         <Footer />
@@ -122,3 +122,5 @@ function App() {
 }
 
 export default App;
+
+//<Route> can be see by everyone, while <ProtectedRoute> can only been see when a user is authenticated.

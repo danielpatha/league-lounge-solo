@@ -39,3 +39,6 @@ export default combineReducers({
   loginMessage,
   registrationMessage,
 });
+
+//This file has two different reducers with a combineReducers used to export them together.
+//This is for organizational purposes, since post reducers have to do with errors.
