@@ -21,3 +21,6 @@ module.exports = {
   badSecret,
   exampleBadSecret,
 };
+
+
+//This is just a constant warning that runes if there is not a SERVER_SESSION_SECRET.
