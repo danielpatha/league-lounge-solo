@@ -4,7 +4,6 @@ import './LandingPage.css';
 import { useDispatch, useSelector } from 'react-redux';
 
 // CUSTOM COMPONENTS
-import RegisterForm from '../RegisterForm/RegisterForm';
 import LeagueForm from '../LeagueForm/LeagueForm';
 
 function LandingPage() {
@@ -23,6 +22,18 @@ function LandingPage() {
   useEffect(() => {
     dispatch({ type: 'FETCH_NEW_LEAGUE' });
 }, []);
+
+//send dispatch stating id and set movie
+function  getLeague(league){
+  console.log("clicked", league.id)
+  dispatch({
+      type: 'SET_LEAGUE',
+      payload: {
+          league
+      }
+  })
+  history.push('/league')
+}
 
 
   return (
@@ -46,7 +57,7 @@ function LandingPage() {
                   <p>{league.day_of_the_week}</p>
 
                   <img src={league.photo} />
-                  <button> Click For More Information</button>         
+                  <button onClick={() => getLeague(league)}> Click For More Information</button>         
                   </div> 
             )
 

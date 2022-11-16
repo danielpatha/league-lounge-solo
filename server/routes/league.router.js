@@ -8,7 +8,8 @@ const router = express.Router();
 router.get('/', (req, res) => {
   // GET route code here
   const sqlText = `SELECT *FROM "league"
-  ORDER BY "id" ASC;`;
+  ORDER BY "id" DESC
+  LIMIT 3;`;
 
   pool.query(sqlText)
   .then((result) =>{

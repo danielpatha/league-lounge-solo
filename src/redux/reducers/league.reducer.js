@@ -1,6 +1,6 @@
 const leagueReducer = (state = [], action) => {
     switch(action.type) {
-        case 'SET_LEAGUE':
+        case 'SET_LEAGUES':
             return action.payload;
     }
 

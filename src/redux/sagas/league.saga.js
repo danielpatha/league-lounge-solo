@@ -12,7 +12,7 @@ function* fetchLeagues(){
 
         //send to redux
         yield put({
-            type: 'SET_LEAGUE',
+            type: 'SET_LEAGUES',
             payload: league.data
         });
 
@@ -22,10 +22,13 @@ function* fetchLeagues(){
     };
 }
 
+
+
 function* leagueSaga() {
     //fetch the shelf from the server and send to redux at fetchShelf fn*
     yield takeEvery('FETCH_NEW_LEAGUE', fetchLeagues);
+
 };
 
-//export shelf saga
+//export saga
 export default leagueSaga;

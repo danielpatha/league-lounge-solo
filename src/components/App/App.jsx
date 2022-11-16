@@ -19,6 +19,8 @@ import InfoPage from '../InfoPage/InfoPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
+//NEW
+import LeaguePage from '../LeaguePage/LeaguePage';
 
 import './App.css';
 
@@ -47,6 +49,11 @@ function App() {
           >
             <AboutPage />
           </Route>
+          
+          <Route exact path = "/league">
+            <LeaguePage/>
+          </Route>
+          
 
           {/* For protected routes, the view could show one of several things on the same route.
             Visiting localhost:3000/user will show the UserPage if the user is logged in.
@@ -67,6 +74,8 @@ function App() {
           >
             <InfoPage />
           </ProtectedRoute>
+
+          
 
           <Route
             exact
@@ -109,6 +118,8 @@ function App() {
               <LandingPage />
             }
           </Route>
+
+          
 
           {/* If none of the other routes matched like /home, we will show a 404. */}
           <Route>
