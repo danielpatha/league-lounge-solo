@@ -34,3 +34,6 @@ module.exports = cookieSession({
   maxAge: 1000 * 60 * 60 * 24 * 7, // Set to 7 days - 1000ms * 60 seconds * 60 minutes * 24 hours * 7 days
   secure: false,
 });
+
+//This is where our auth users are stored within a session
+//Max age is the length of the session.

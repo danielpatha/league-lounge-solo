@@ -28,7 +28,7 @@ function ProtectedRoute({ component, children, ...props }) {
       {...props}
     >
       {user.id ?
-        // If the user is logged in, show the protected component
+        // If the user is logged in, show the protected component HERE the logc for showing the userpage or the login page.
         <ProtectedComponent />
         :
         // Otherwise, redirect to the Loginpage
@@ -40,3 +40,7 @@ function ProtectedRoute({ component, children, ...props }) {
 }
 
 export default ProtectedRoute;
+
+//This is use to create a secure route, so that an unauthenticated user can't see the page.
+//This can be seen in App.jsx file.
+

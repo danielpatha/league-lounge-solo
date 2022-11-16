@@ -34,7 +34,7 @@ function LoginForm() {
       )}
       <div>
         <label htmlFor="username">
-          Username:
+          Username/Alias:
           <input
             type="text"
             name="username"
@@ -44,6 +44,7 @@ function LoginForm() {
           />
         </label>
       </div>
+
       <div>
         <label htmlFor="password">
           Password:
@@ -64,3 +65,5 @@ function LoginForm() {
 }
 
 export default LoginForm;
+
+//They make these forms seperate components so you can move it to different places.

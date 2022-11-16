@@ -1,17 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import './LandingPage.css';
+import { useDispatch, useSelector } from 'react-redux';
 
 // CUSTOM COMPONENTS
-import RegisterForm from '../RegisterForm/RegisterForm';
+import LeagueForm from '../LeagueForm/LeagueForm';
 
 function LandingPage() {
-  const [heading, setHeading] = useState('Welcome');
-  const history = useHistory();
+  //ORIGINAL
+  const [heading, setHeading] = useState('Find a League Near You ');
+  const leagueStore = useSelector(store => store.leagueReducer)
 
-  const onLogin = (event) => {
-    history.push('/login');
-  };
+
+  const history = useHistory();
+  const dispatch = useDispatch();
+
+  // const onLogin = (event) => {
+  //   history.push('/login');
+  // };
+
+  useEffect(() => {
+    dispatch({ type: 'FETCH_NEW_LEAGUE' });
+}, []);
+
+//send dispatch stating id and set movie
+function  getLeague(league){
+  console.log("clicked", league.id)
+  dispatch({
+      type: 'SET_LEAGUE',
+      payload: {
+          league
+      }
+  })
+  history.push('/league')
+}
+
 
   return (
     <div className="container">
@@ -19,47 +42,41 @@ function LandingPage() {
 
       <div className="grid">
         <div className="grid-col grid-col_8">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-            id felis metus. Vestibulum et pulvinar tortor. Morbi pharetra lacus
-            ut ex molestie blandit. Etiam et turpis sit amet risus mollis
-            interdum. Suspendisse et justo vitae metus bibendum fringilla sed
-            sed justo. Aliquam sollicitudin dapibus lectus, vitae consequat odio
-            elementum eget. Praesent efficitur eros vitae nunc interdum, eu
-            interdum justo facilisis. Sed pulvinar nulla ac dignissim efficitur.
-            Quisque eget eros metus. Vestibulum bibendum fringilla nibh a
-            luctus. Duis a sapien metus.
-          </p>
+         <LeagueForm/>
 
-          <p>
-            Praesent consectetur orci dui, id elementum eros facilisis id. Sed
-            id dolor in augue porttitor faucibus eget sit amet ante. Nunc
-            consectetur placerat pharetra. Aenean gravida ex ut erat commodo, ut
-            finibus metus facilisis. Nullam eget lectus non urna rhoncus
-            accumsan quis id massa. Curabitur sit amet dolor nisl. Proin
-            euismod, augue at condimentum rhoncus, massa lorem semper lacus, sed
-            lobortis augue mi vel felis. Duis ultrices sapien at est convallis
-            congue.
-          </p>
+    <h3>Newly Added Leagues</h3>
 
-          <p>
-            Fusce porta diam ac tortor elementum, ut imperdiet metus volutpat.
-            Suspendisse posuere dapibus maximus. Aliquam vitae felis libero. In
-            vehicula sapien at semper ultrices. Vivamus sed feugiat libero. Sed
-            sagittis neque id diam euismod, ut egestas felis ultricies. Nullam
-            non fermentum mauris. Sed in enim ac turpis faucibus pretium in sit
-            amet nisi.
-          </p>
+    <section className='flex-container'>
+        
+        {leagueStore.map(league => {
+            return(
+                <div className = 'flex-item' key = {league.id}>
+                  <h4> {league.league_city_name}</h4>
+                  <h5>{league.address}</h5>
+                  <h6>{league.sport}</h6> 
+                  <p>{league.day_of_the_week}</p>
+
+                  <img src={league.photo} />
+                  <button onClick={() => getLeague(league)}> Click For More Information</button>         
+                  </div> 
+            )
+
+        })}
+        
+
+      </section>
+   
         </div>
         <div className="grid-col grid-col_4">
-          <RegisterForm />
-
-          <center>
+          {/* Original Stuff */}
+          {/* <RegisterForm /> */}
+            
+          {/* <center>
             <h4>Already a Member?</h4>
             <button className="btn btn_sizeSm" onClick={onLogin}>
               Login
             </button>
-          </center>
+          </center> */}
         </div>
       </div>
     </div>

@@ -63,3 +63,5 @@ passport.use(
 );
 
 module.exports = passport;
+
+//You won't change this file unless you're doing something other than a username for login.

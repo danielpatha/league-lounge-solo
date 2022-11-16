@@ -26,3 +26,5 @@ module.exports = {
   encryptPassword,
   comparePassword,
 };
+
+//This is just for password encryption, don't change this.

@@ -11,3 +11,5 @@ const rejectUnauthenticated = (req, res, next) => {
 };
 
 module.exports = { rejectUnauthenticated };
+
+//Checks whether or not people have access to stuff depending on if they're a user.

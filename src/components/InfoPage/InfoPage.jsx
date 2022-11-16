@@ -1,3 +1,5 @@
+//I'm not using this at the moment, the link used to appear when logged in. Might use it for something else.
+
 import React from 'react';
 
 // This is one of our simplest components

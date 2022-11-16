@@ -9,24 +9,46 @@ function Nav() {
 
   return (
     <div className="nav">
+       <Link className="navLink" to="/user">
+              My Account
+            </Link>
+
+
+
       <Link to="/home">
-        <h2 className="nav-title">Prime Solo Project</h2>
+        <h2 className="nav-title">League Lounge</h2>
       </Link>
-      <div>
+
+      <Link className="navLink" to="/about">
+          About 
+        </Link>
+     
+       <div> 
+        {/* ORIGINAL */}
         {/* If no user is logged in, show these links */}
-        {!user.id && (
-          // If there's no user, show login/registration links
+         {!user.id && ( 
+            // If there's no user, show login/registration links
           <Link className="navLink" to="/login">
-            Login / Register
-          </Link>
+          Login / Register
+         </Link>
+         )} 
+
+                {/* If a user is logged in, show these links */}
+         {user.id && (
+          <>
+            <LogOutButton className="navLink" />
+          </>
         )}
 
+
+      </div> 
+        
+      
+        {/* ORIGINAL */}
         {/* If a user is logged in, show these links */}
-        {user.id && (
+        {/* {user.id && (
           <>
-            <Link className="navLink" to="/user">
-              Home
-            </Link>
+     
 
             <Link className="navLink" to="/info">
               Info Page
@@ -36,10 +58,8 @@ function Nav() {
           </>
         )}
 
-        <Link className="navLink" to="/about">
-          About
-        </Link>
-      </div>
+
+      </div> */}
     </div>
   );
 }
