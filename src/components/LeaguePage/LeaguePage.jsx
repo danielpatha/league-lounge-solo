@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { useSelector } from "react-redux";
 import {useHistory} from 'react-router-dom'
 
@@ -6,11 +7,16 @@ import {useHistory} from 'react-router-dom'
 function LeaguePage() {
     const history = useHistory()
     const specificLeague = useSelector((store) => store.leaguePageReducer);
+    const backToHome = () => {
+      history.push("/");
+    };
+
 
     
     return (
       <div className="container">
         <div>
+          <button onClick={() => backToHome()}> Back to Home </button>
           <h2>League Page</h2>
           {/* display photo, title and description */}
         <div key={specificLeague.league.id}> 
