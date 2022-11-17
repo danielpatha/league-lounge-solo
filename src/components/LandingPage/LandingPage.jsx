@@ -9,7 +9,7 @@ import LeagueForm from '../LeagueForm/LeagueForm';
 function LandingPage() {
   //ORIGINAL
   const [heading, setHeading] = useState('Find a League Near You ');
-  const leagueStore = useSelector(store => store.leagueReducer)
+  const leagueStore = useSelector(store => store.landingPageReducer)
 
 
   const history = useHistory();

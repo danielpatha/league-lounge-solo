@@ -24,11 +24,11 @@ function* fetchLeagues(){
 
 
 
-function* leagueSaga() {
+function* landingPageSaga() {
     //fetch the shelf from the server and send to redux at fetchShelf fn*
     yield takeEvery('FETCH_NEW_LEAGUE', fetchLeagues);
 
 };
 
 //export saga
-export default leagueSaga;
+export default landingPageSaga;

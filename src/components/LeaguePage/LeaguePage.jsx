@@ -17,6 +17,8 @@ function LeaguePage() {
         <img src={specificLeague.league.photo}/>
         <h2>{specificLeague.league.address}</h2>
         <h4>{specificLeague.league.sport}</h4>
+        <p>{specificLeague.league.notes}</p>
+        <a href={specificLeague.league.link}>{specificLeague.league.link}</a>
         </div>
         </div>
       </div>
