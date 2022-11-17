@@ -10,8 +10,7 @@ function LandingPage() {
   //ORIGINAL
   const [heading, setHeading] = useState('Find a League Near You ');
   const leagueStore = useSelector(store => store.landingPageReducer)
-
-
+  
   const history = useHistory();
   const dispatch = useDispatch();
 

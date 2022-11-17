@@ -4,10 +4,11 @@ import { put, takeEvery } from 'redux-saga/effects';
 
 
 //pass through movie id to SQL and get genre list
-function* fetchLeaguePage(league){
+function* fetchLeaguePage(action){
+    const id = action.payload
     try {
-        console.log(league.payload.league.id)
-        const league = yield axios.get(`/api/genre/${league.payload.league.id}`);
+        console.log(type.payload)
+        const league = yield axios.get(`/api/leaguePage${id}`);
         console.log('get league:', league.data);
         
         //send to redux

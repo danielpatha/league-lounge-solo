@@ -1,4 +1,16 @@
+import React, { useState,useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
+
+import { useDispatch, useSelector } from 'react-redux';
+
 function LeagueForm(){
+    const history = useHistory();
+    const dispatch = useDispatch();
+    
+    const toResultsPage = () => {
+        history.push("/results");
+      };
+
     return(
         <div>
         <form>
@@ -15,7 +27,7 @@ function LeagueForm(){
         <input placeholder="Co-Ed ⬇" list="co-ed"></input>
 
 
-<button>Submit</button>
+<button onClick={() => toResultsPage()}>Submit</button>
 
 </form>
 

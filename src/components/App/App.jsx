@@ -10,7 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
-
+import './App.css';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 
 import AboutPage from '../AboutPage/AboutPage';
@@ -21,8 +21,9 @@ import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 //NEW
 import LeaguePage from '../LeaguePage/LeaguePage';
+import ResultsPage from '../ResultsPage/ResultsPage';
 
-import './App.css';
+
 
 function App() {
   const dispatch = useDispatch();
@@ -52,6 +53,10 @@ function App() {
           
           <Route exact path = "/league">
             <LeaguePage/>
+          </Route>
+
+          <Route exact path = "/results">
+            <ResultsPage/>
           </Route>
           
 

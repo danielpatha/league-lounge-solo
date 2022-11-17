@@ -8,7 +8,7 @@ function* fetchLeagues(){
 
     // get shelf from server via axios
     try{
-        const league = yield axios.get('/api/league');
+        const league = yield axios.get('/api/landingPage');
 
         //send to redux
         yield put({
