@@ -11,10 +11,14 @@ router.get('/:id', (req, res) => {
   const sqlText = `SELECT *FROM "league"
   WHERE "id" = $1;`;
 
-  pool.query(sqlText,id)
+  console.log("req.params", req.params.id)
+  console.log("id", id);
+
+  pool.query(sqlText,[id])
   .then((result) =>{
    // console.log('result is:',result.rows)
-   res.send(result.rows)
+   res.send(result.rows) 
+   console.log(result.rows);
   })
   .catch((error) =>{
    console.log('error fetching items', error)

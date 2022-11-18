@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from 'react-redux';
 function LeagueForm(){
     const history = useHistory();
     const dispatch = useDispatch();
+    const [league, setLeague] = useState('');
+    const [address, setAddress] = useState('');
     
     const toResultsPage = () => {
         history.push("/results");

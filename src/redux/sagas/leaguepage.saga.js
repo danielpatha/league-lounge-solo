@@ -6,9 +6,9 @@ import { put, takeEvery } from 'redux-saga/effects';
 //pass through movie id to SQL and get genre list
 function* fetchLeaguePage(action){
     const id = action.payload
+    console.log("action",action.payload)
     try {
-        console.log(type.payload)
-        const league = yield axios.get(`/api/leaguePage${id}`);
+        const league = yield axios.get(`/api/leaguePage/${id}`);
         console.log('get league:', league.data);
         
         //send to redux
@@ -21,7 +21,7 @@ function* fetchLeaguePage(action){
 
 function* leaguePageSaga() {
     //fetch the shelf from the server and send to redux at fetchShelf fn*
-    yield takeEvery('SET_LEAGUE', fetchLeaguePage);
+    yield takeEvery('FETCH_LEAGUE', fetchLeaguePage);
 };
 
 //export saga

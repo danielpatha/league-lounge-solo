@@ -50,8 +50,13 @@ function App() {
           >
             <AboutPage />
           </Route>
+
+          {/* //Had to add this, to get the page accessible when logged in and out. BELOW */}
+          <Route exact path = "/home"> 
+            <LandingPage/>
+          </Route>
           
-          <Route exact path = "/league">
+          <Route exact path = "/league/:id">
             <LeaguePage/>
           </Route>
 

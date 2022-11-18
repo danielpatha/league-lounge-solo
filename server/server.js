@@ -29,7 +29,7 @@ app.use(passport.session());
 app.use('/api/user', userRouter);
 //NEW
 app.use('/api/landingPage', landingPageRouter);
-app.use("/api/leaguePage", leaguePageRouter)
+app.use('/api/leaguePage', leaguePageRouter)
 
 
 // Serve static files

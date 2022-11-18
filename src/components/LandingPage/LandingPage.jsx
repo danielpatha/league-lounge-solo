@@ -25,13 +25,13 @@ function LandingPage() {
 //send dispatch stating id and set movie
 function  getLeague(league){
   console.log("clicked", league.id)
-  dispatch({
-      type: 'SET_LEAGUE',
-      payload: {
-          league
-      }
-  })
-  history.push('/league')
+  // dispatch({
+  //     type: 'SET_LEAGUE',
+  //     payload: {
+  //         league
+  //     }
+  // })
+  history.push(`/league/${league.id}`)
 }
 
 

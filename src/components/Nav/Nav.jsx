@@ -9,6 +9,10 @@ function Nav() {
 
   return (
     <div className="nav">
+
+<Link className="navLink" to="/home">
+              Home
+            </Link>
        <Link className="navLink" to="/user">
               My Account
             </Link>
