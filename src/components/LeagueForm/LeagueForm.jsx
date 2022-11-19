@@ -13,10 +13,11 @@ function LeagueForm(){
         history.push("/results");
       };
 
+      
     return(
         <div>
         <form>
-        <input placeholder="League/City Name"></input>
+        {/* <input placeholder="League/City Name"></input>
         <input  placeholder="Address"></input>
 
         <input placeholder ="Sports ⬇" list = "sports"/>
@@ -25,7 +26,7 @@ function LeagueForm(){
         <br></br>
         <input placeholder="Season ⬇" list = "season"></input>
         <input placeholder="Day of the Week ⬇" list = "day"></input>
-        <input placeholder="Time of Day ⬇" list = "time"></input>
+        <input placeholder="Time of Day ⬇" list = "time"></input> */}
         <input placeholder="Co-Ed ⬇" list="co-ed"></input>
 
 

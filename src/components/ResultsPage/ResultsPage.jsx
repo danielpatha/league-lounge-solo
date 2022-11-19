@@ -1,7 +1,4 @@
 function ResultsPage (){
-    useEffect(() => {
-        dispatch({ type: "FETCH_RESULTS" });
-      }, []);
 
     return(
         <>

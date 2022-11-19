@@ -3,6 +3,7 @@ import errors from './errors.reducer';
 import user from './user.reducer';
 import landingPageReducer from './landingPage.reducer';
 import leaguePageReducer from './leaguepage.reducer';
+import deleteLeagueReducer from './deleteLeague.reducer';
 
 // rootReducer is the primary reducer for our entire project
 // It bundles up all of the other reducers so our project can use them.
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
   user, // will have an id and username if someone is logged in
   landingPageReducer,
   leaguePageReducer,
+  deleteLeagueReducer,
 });
 //to access these in the code I guess we'll do this. 
 //this.props.store.errors.loginMessage

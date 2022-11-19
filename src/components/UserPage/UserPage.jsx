@@ -17,6 +17,12 @@ function UserPage() {
 
        <h3 className = 'flex-item1' >Favorites</h3>
 
+
+
+      
+
+       <button>Add a League</button>
+
        <h3 className = 'flex-item2'>Profile Picture</h3> 
 
 
