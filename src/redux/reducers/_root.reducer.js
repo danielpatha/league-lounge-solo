@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
 import errors from './errors.reducer';
 import user from './user.reducer';
-import leagueReducer from './league.reducer';
+import landingPageReducer from './landingPage.reducer';
 import leaguePageReducer from './leaguepage.reducer';
+import deleteLeagueReducer from './deleteLeague.reducer';
 
 // rootReducer is the primary reducer for our entire project
 // It bundles up all of the other reducers so our project can use them.
@@ -13,8 +14,9 @@ import leaguePageReducer from './leaguepage.reducer';
 const rootReducer = combineReducers({
   errors, // contains registrationMessage and loginMessage
   user, // will have an id and username if someone is logged in
-  leagueReducer,
+  landingPageReducer,
   leaguePageReducer,
+  deleteLeagueReducer,
 });
 //to access these in the code I guess we'll do this. 
 //this.props.store.errors.loginMessage

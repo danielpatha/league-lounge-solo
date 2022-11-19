@@ -8,7 +8,7 @@ function* fetchLeagues(){
 
     // get shelf from server via axios
     try{
-        const league = yield axios.get('/api/league');
+        const league = yield axios.get('/api/landingPage');
 
         //send to redux
         yield put({
@@ -24,11 +24,11 @@ function* fetchLeagues(){
 
 
 
-function* leagueSaga() {
+function* landingPageSaga() {
     //fetch the shelf from the server and send to redux at fetchShelf fn*
     yield takeEvery('FETCH_NEW_LEAGUE', fetchLeagues);
 
 };
 
 //export saga
-export default leagueSaga;
+export default landingPageSaga;

@@ -1,0 +1,9 @@
+.usercontainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-item1{
+    background-color: bisque;
+    
+}

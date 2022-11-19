@@ -1,4 +1,4 @@
-const leagueReducer = (state = [], action) => {
+const landingPageReducer = (state = [], action) => {
     switch(action.type) {
         case 'SET_LEAGUES':
             return action.payload;
@@ -8,4 +8,4 @@ const leagueReducer = (state = [], action) => {
 }
 
 
-export default leagueReducer;
+export default landingPageReducer;

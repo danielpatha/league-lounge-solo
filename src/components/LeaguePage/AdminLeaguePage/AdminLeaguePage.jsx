@@ -5,7 +5,7 @@ import {useHistory} from 'react-router-dom'
 import { useParams } from 'react-router-dom';
 
 
-function LeaguePage() {
+function AdminLeaguePage() {
     const history = useHistory()
     const dispatch = useDispatch();
     const params = useParams();
@@ -70,4 +70,4 @@ function LeaguePage() {
     );
   }
   
-  export default LeaguePage;
+  export default AdminLeaguePage;

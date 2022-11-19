@@ -9,9 +9,8 @@ import LeagueForm from '../LeagueForm/LeagueForm';
 function LandingPage() {
   //ORIGINAL
   const [heading, setHeading] = useState('Find a League Near You ');
-  const leagueStore = useSelector(store => store.leagueReducer)
-
-
+  const leagueStore = useSelector(store => store.landingPageReducer)
+  
   const history = useHistory();
   const dispatch = useDispatch();
 
@@ -26,13 +25,13 @@ function LandingPage() {
 //send dispatch stating id and set movie
 function  getLeague(league){
   console.log("clicked", league.id)
-  dispatch({
-      type: 'SET_LEAGUE',
-      payload: {
-          league
-      }
-  })
-  history.push('/league')
+  // dispatch({
+  //     type: 'SET_LEAGUE',
+  //     payload: {
+  //         league
+  //     }
+  // })
+  history.push(`/league/${league.id}`)
 }
 
 

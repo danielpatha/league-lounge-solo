@@ -1,8 +1,23 @@
+import React, { useState,useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
+
+import { useDispatch, useSelector } from 'react-redux';
+
 function LeagueForm(){
+    const history = useHistory();
+    const dispatch = useDispatch();
+    const [league, setLeague] = useState('');
+    const [address, setAddress] = useState('');
+    
+    const toResultsPage = () => {
+        history.push("/results");
+      };
+
+      
     return(
         <div>
         <form>
-        <input placeholder="League/City Name"></input>
+        {/* <input placeholder="League/City Name"></input>
         <input  placeholder="Address"></input>
 
         <input placeholder ="Sports ⬇" list = "sports"/>
@@ -11,11 +26,11 @@ function LeagueForm(){
         <br></br>
         <input placeholder="Season ⬇" list = "season"></input>
         <input placeholder="Day of the Week ⬇" list = "day"></input>
-        <input placeholder="Time of Day ⬇" list = "time"></input>
+        <input placeholder="Time of Day ⬇" list = "time"></input> */}
         <input placeholder="Co-Ed ⬇" list="co-ed"></input>
 
 
-<button>Submit</button>
+<button onClick={() => toResultsPage()}>Submit</button>
 
 </form>
 
