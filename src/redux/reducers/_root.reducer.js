@@ -4,6 +4,7 @@ import user from './user.reducer';
 import landingPageReducer from './landingPage.reducer';
 import leaguePageReducer from './leaguepage.reducer';
 import deleteLeagueReducer from './deleteLeague.reducer';
+import ResultsPageReducer from './ResultsPage.reducer';
 
 // rootReducer is the primary reducer for our entire project
 // It bundles up all of the other reducers so our project can use them.
@@ -17,6 +18,7 @@ const rootReducer = combineReducers({
   landingPageReducer,
   leaguePageReducer,
   deleteLeagueReducer,
+  ResultsPageReducer,
 });
 //to access these in the code I guess we'll do this. 
 //this.props.store.errors.loginMessage
