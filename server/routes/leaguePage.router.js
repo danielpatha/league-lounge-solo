@@ -32,6 +32,20 @@ router.get('/:id', (req, res) => {
  */
 router.post('/', (req, res) => {
   // POST route code here
+  //const queryText = `INSERT INTO "user" (username, password)
+   // VALUES ($1, $2) RETURNING id`;
+  const sqlText = `INSERT INTO "league" (league_city_name, sport) VALUES ($1, $2) RETURNING id`;
+
+  console.log("req.body", req.body)
+
+  pool
+    .query(sqlText, [req.body.league_city_name, req.body.sport])
+    .then((queryResponse) => res.send(queryResponse))
+    .catch((err) => {
+      console.log('League Add failed: ', err);
+      res.sendStatus(500);
+    });
+  
 });
 
 

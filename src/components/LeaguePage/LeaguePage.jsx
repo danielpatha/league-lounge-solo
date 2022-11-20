@@ -22,7 +22,7 @@ function LeaguePage() {
     type: 'DELETE_LEAGUE',
     payload: params.id
 });
-// }, [params.id]);
+  dispatch({ type: 'FETCH_NEW_LEAGUE' });
   history.push(`/home`)
 }
     

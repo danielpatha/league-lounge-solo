@@ -19,6 +19,20 @@ function* fetchLeaguePage(action){
     }
 }
 
+function* addLeaguePage(action){
+    const newLeagueData = action.payload
+    console.log("action",action.payload)
+    try {
+        const league = yield axios.post(`/api/leaguePage`, newLeagueData);
+        console.log('get league:', league.data);
+        
+        //send to redux
+        // yield put({ type: 'SET_LEAGUE', payload: league.data });
+    } 
+    catch {
+        console.log('LeaguePage POST error');
+    }
+}
 
 function* deleteLeaguePage(action){
     const id = action.payload
@@ -39,6 +53,7 @@ function* leaguePageSaga() {
     //fetch the shelf from the server and send to redux at fetchShelf fn*
     yield takeEvery('FETCH_LEAGUE', fetchLeaguePage);
     yield takeEvery('DELETE_LEAGUE', deleteLeaguePage);
+    yield takeEvery('ADD_LEAGUE', addLeaguePage);
 };
 
 //export saga
