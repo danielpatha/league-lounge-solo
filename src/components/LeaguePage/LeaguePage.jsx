@@ -16,15 +16,19 @@ function LeaguePage() {
  console.log("Specific league",specificLeague);
 
 
-
  function onDelete(){
   dispatch({
     type: 'DELETE_LEAGUE',
     payload: params.id
 });
-  dispatch({ type: 'FETCH_NEW_LEAGUE' });
+  //dispatch({ type: 'FETCH_NEW_LEAGUE' }); Tried this to update what's on dom when deleting.
   history.push(`/home`)
 }
+
+function onEdit(){
+  history.push(`/league/${specificLeague.id}/edit`)
+}
+    
     
 
  
@@ -72,6 +76,7 @@ console.log(specificLeague.co_ed)
         <a href={specificLeague.link} target = "_blank" rel="noopener noreferrer">{specificLeague.link}</a>
 
         <button onClick={() => onDelete()}>Delete</button>
+        <button onClick={() => onEdit()}>Edit</button>
         </div>
         </div>
       </div>
