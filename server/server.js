@@ -11,7 +11,8 @@ const passport = require('./strategies/user.strategy');
 const userRouter = require('./routes/user.router');
 //NEW
 const landingPageRouter = require('./routes/landingPage.router');
-const leaguePageRouter= require('./routes/leaguePage.router')
+const leaguePageRouter= require('./routes/leaguePage.router');
+const ResultsPageRouter = require('./routes/ResultsPage.router')
 
 
 // Body parser middleware
@@ -30,6 +31,7 @@ app.use('/api/user', userRouter);
 //NEW
 app.use('/api/landingPage', landingPageRouter);
 app.use('/api/leaguePage', leaguePageRouter)
+app.use('/api/resultsPage', ResultsPageRouter)
 
 
 // Serve static files

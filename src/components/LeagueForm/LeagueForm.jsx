@@ -6,31 +6,43 @@ import { useDispatch, useSelector } from 'react-redux';
 function LeagueForm(){
     const history = useHistory();
     const dispatch = useDispatch();
-    const [league, setLeague] = useState('');
-    const [address, setAddress] = useState('');
+    const [sport, setSport] = useState('');
     
-    const toResultsPage = () => {
-        history.push("/results");
-      };
+    
+    const handleChange=(evt) => {
+     setSport(evt.target.value)
+     console.log(evt)
+    }
+   
+    
 
-      
+      function onSubmit(){
+        console.log("sport",sport);
+        dispatch({
+          type: 'SEARCH_LEAGUE',
+          payload: sport
+      });
+        history.push(`/results`)
+      }
+          
+
     return(
         <div>
         <form>
         {/* <input placeholder="League/City Name"></input>
-        <input  placeholder="Address"></input>
+        <input  placeholder="Address"></input> */}
 
-        <input placeholder ="Sports ⬇" list = "sports"/>
+        <input value = {sport} onChange={(evt) => handleChange(evt)} placeholder ="Sports ⬇" list = "sports"/>
 
-        <input placeholder="Competitive Level ⬇" list = "levels"></input>
+        {/* <input placeholder="Competitive Level ⬇" list = "levels"></input>
         <br></br>
         <input placeholder="Season ⬇" list = "season"></input>
         <input placeholder="Day of the Week ⬇" list = "day"></input>
-        <input placeholder="Time of Day ⬇" list = "time"></input> */}
-        <input placeholder="Co-Ed ⬇" list="co-ed"></input>
+        <input placeholder="Time of Day ⬇" list = "time"></input>
+        <input placeholder="Co-Ed ⬇" list="co-ed"></input> */}
 
 
-<button onClick={() => toResultsPage()}>Submit</button>
+<button onClick={() => onSubmit()}>Submit</button>
 
 </form>
 
