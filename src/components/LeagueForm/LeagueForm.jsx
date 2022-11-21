@@ -8,7 +8,6 @@ function LeagueForm(){
     const dispatch = useDispatch();
     const [sport, setSport] = useState('');
     
-    
     const handleChange=(evt) => {
      setSport(evt.target.value)
      console.log(evt)
@@ -86,7 +85,17 @@ function LeagueForm(){
 <datalist id="sports">
 <option value="Basketball"></option>
 <option value="Bowling"></option>
+<option value="Broomball"></option>
+<option value="Cornhole/Bags"></option>
+<option value="Dodgeball"></option>
+<option value="Flag Football"></option>
+<option value="Golf"></option>
+<option value="Kickball"></option>
+<option value="Pickleball"></option>
+<option value="Soccer"></option>
 <option value="Softball"></option>
+<option value="Tennis"></option>
+<option value="Ultimate Frisbee"></option>
 <option value="Volleyball"></option>
 </datalist>
 </div>

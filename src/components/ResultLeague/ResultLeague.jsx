@@ -17,6 +17,7 @@ function ResultLeague({league}){
       }
 return(
     <main className = "flexContainer">
+        
     <div className = "flexItem">
 
     <img src={league.photo}/>
