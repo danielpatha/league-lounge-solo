@@ -45,7 +45,7 @@ function* deleteLeaguePage(action){
         yield put({ type: 'REMOVE_LEAGUE', payload: league.data });
     } 
     catch {
-        console.log('LeaguePage GETTING error');
+        console.log('LeaguePage DELETING error');
     }
 }
 

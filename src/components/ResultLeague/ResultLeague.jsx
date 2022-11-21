@@ -1,6 +1,6 @@
 import { useDispatch} from "react-redux";
 import {useHistory} from 'react-router-dom'
-import "./ResultsLeague.css"
+import "./ResultLeague.css"
 function ResultLeague({league}){
     const history = useHistory()
     const dispatch = useDispatch();
