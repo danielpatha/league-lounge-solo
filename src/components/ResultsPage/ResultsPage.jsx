@@ -9,6 +9,7 @@ function ResultsPage (){
     return(
         <div>
             <h1> Results </h1>
+            
             <ul>
         {results.map(league => {
             console.log(league);

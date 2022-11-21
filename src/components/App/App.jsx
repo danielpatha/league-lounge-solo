@@ -22,6 +22,7 @@ import RegisterPage from '../RegisterPage/RegisterPage';
 //NEW
 import LeaguePage from '../LeaguePage/LeaguePage';
 import ResultsPage from '../ResultsPage/ResultsPage';
+import EditPage from '../EditPage/EditPage';
 
 
 
@@ -59,6 +60,12 @@ function App() {
           <Route exact path = "/league/:id">
             <LeaguePage/>
           </Route>
+          <Route 
+                    exact
+                    path="/league/:id/edit"
+                >
+                    <EditPage />
+                </Route>
 
           <Route exact path = "/results">
             <ResultsPage/>

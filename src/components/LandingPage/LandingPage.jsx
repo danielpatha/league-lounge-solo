@@ -50,10 +50,12 @@ function  getLeague(league){
         {leagueStore.map(league => {
             return(
                 <div className = 'flex-item' key = {league.id}>
-                  <h4> {league.league_city_name}</h4>
-                  <h5>{league.address}</h5>
-                  <h6>{league.sport}</h6> 
-                  <p>{league.day_of_the_week}</p>
+                  <h4>League/City Name: {league.league_city_name} </h4>
+                  
+                  
+                  <h5>Address: {league.address}</h5>
+                  <h6>Sport:{league.sport}</h6> 
+                  <p>Day:{league.day_of_the_week}</p>
 
                   <img src={league.photo} />
                   <button onClick={() => getLeague(league)}> Click For More Information</button>         

@@ -16,15 +16,19 @@ function LeaguePage() {
  console.log("Specific league",specificLeague);
 
 
-
  function onDelete(){
   dispatch({
     type: 'DELETE_LEAGUE',
     payload: params.id
 });
-  dispatch({ type: 'FETCH_NEW_LEAGUE' });
+  //dispatch({ type: 'FETCH_NEW_LEAGUE' }); Tried this to update what's on dom when deleting.
   history.push(`/home`)
 }
+
+function onEdit(){
+  history.push(`/league/${specificLeague.id}/edit`)
+}
+    
     
 
  
@@ -44,7 +48,7 @@ function LeaguePage() {
 
 
 
-
+console.log(specificLeague.co_ed)
   
 
   
@@ -58,12 +62,21 @@ function LeaguePage() {
           
         <div key={specificLeague.id}> 
         <img src={specificLeague.photo}/>
-        <h2>{specificLeague.address}</h2>
-        <h4>{specificLeague.sport}</h4>
-        <p>{specificLeague.notes}</p>
-        <a href={specificLeague.link}>{specificLeague.link}</a>
+        <h2>Address:</h2>
+           <p>{specificLeague.address}</p>
+           <h3>Co-Ed: {String(specificLeague.co_ed) }</h3>
+        <h2>Sport: {specificLeague.sport}</h2>
+        <h2>Competitive Level: {specificLeague.competitive_level}</h2>
+        <h2>Season: {specificLeague.season}</h2>
+        <h3>Day of the Week: {specificLeague.day_of_the_week}</h3>
+        <h3>Time of Day: {specificLeague.time_of_day}</h3>
+        
+        
+        <p>Notes: {specificLeague.notes}</p>
+        <a href={specificLeague.link} target = "_blank" rel="noopener noreferrer">{specificLeague.link}</a>
 
         <button onClick={() => onDelete()}>Delete</button>
+        <button onClick={() => onEdit()}>Edit</button>
         </div>
         </div>
       </div>
