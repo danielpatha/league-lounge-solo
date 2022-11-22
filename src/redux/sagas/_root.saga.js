@@ -5,6 +5,7 @@ import userSaga from './user.saga';
 import landingPageSaga from './landingPage.saga';
 import leaguePageSaga from './leaguepage.saga';
 import ResultsPageSaga from './ResultsPage.saga';
+import editPageSaga from './editPage.saga';
 
 
 // rootSaga is the primary saga.
@@ -22,6 +23,7 @@ export default function* rootSaga() {
     landingPageSaga(),
     leaguePageSaga(),
     ResultsPageSaga(),
+    editPageSaga(),
   ]);
 }
 

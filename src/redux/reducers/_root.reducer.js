@@ -5,7 +5,7 @@ import landingPageReducer from './landingPage.reducer';
 import leaguePageReducer from './leaguepage.reducer';
 import deleteLeagueReducer from './deleteLeague.reducer';
 import ResultsPageReducer from './ResultsPage.reducer';
-import editPageReducer from './EditPage.reducer';
+import editPageReducer from './editPage.reducer';
 
 // rootReducer is the primary reducer for our entire project
 // It bundles up all of the other reducers so our project can use them.
