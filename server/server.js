@@ -13,7 +13,7 @@ const userRouter = require('./routes/user.router');
 const landingPageRouter = require('./routes/landingPage.router');
 const leaguePageRouter= require('./routes/leaguePage.router');
 const ResultsPageRouter = require('./routes/ResultsPage.router')
-
+const editPageRouter = require('./routes/editPage.router')
 
 // Body parser middleware
 app.use(bodyParser.json());
@@ -32,6 +32,7 @@ app.use('/api/user', userRouter);
 app.use('/api/landingPage', landingPageRouter);
 app.use('/api/leaguePage', leaguePageRouter)
 app.use('/api/resultsPage', ResultsPageRouter)
+app.use('/api/editPage', editPageRouter)
 
 
 // Serve static files

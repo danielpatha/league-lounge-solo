@@ -8,7 +8,7 @@ function* fetchLeagues(){
 
     // get shelf from server via axios
     try{
-        const league = yield axios.get('/api/landingPage');
+        const league = yield axios.get('/api/landingPage');//This is how you identity the router.
 
         //send to redux
         yield put({
