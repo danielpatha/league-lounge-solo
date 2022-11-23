@@ -86,7 +86,7 @@ function LeagueForm(){
 <option value="Basketball"></option>
 <option value="Bowling"></option>
 <option value="Broomball"></option>
-<option value="Cornhole/Bags"></option>
+<option value="Bean Bags/Corn Hole"></option>
 <option value="Dodgeball"></option>
 <option value="Flag Football"></option>
 <option value="Golf"></option>

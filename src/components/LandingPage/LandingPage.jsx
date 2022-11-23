@@ -8,7 +8,7 @@ import LeagueForm from '../LeagueForm/LeagueForm';
 
 function LandingPage() {
   //ORIGINAL
-  const [heading, setHeading] = useState('Find a League Near You ');
+  //const [heading, setHeading] = useState('Find a League Near You ');
   const leagueStore = useSelector(store => store.landingPageReducer)
   
   const history = useHistory();
@@ -37,7 +37,7 @@ function  getLeague(league){
 
   return (
     <div className="container">
-      <h2>{heading}</h2>
+      <h2>Find a Local League</h2>
 
       <div className="grid">
         <div className="grid-col grid-col_8">
