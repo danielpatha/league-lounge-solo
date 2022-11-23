@@ -54,7 +54,7 @@ function UserPage() {
       
         <input name="co_ed" list = "co_ed" type="text" value={co_ed} placeholder="Co-Ed Available?" onChange={(e) => setCo_ed(e.target.value)} />
       
-        <input name="notes" className = "notes"  type="text" value={notes} placeholder="Notes" onChange={(e) => setNotes(e.target.value)} /> 
+        <textarea name="notes" className = "notes"  type="text" value={notes} placeholder="Notes" onChange={(e) => setNotes(e.target.value)} ></textarea>
 
         <input name="link" className = "link"  type="text" value={link} placeholder="Link" onChange={(e) => setLink(e.target.value)} />
 

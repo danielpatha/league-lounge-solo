@@ -115,13 +115,13 @@ function EditPage(){
             />  
 
 
-        <input name="notes" 
+        <textarea name="notes" 
                 value={specificLeague.notes}
                 onChange={(evt) => dispatch({
                     type: 'UPDATE_EDIT_LEAGUE',
                     payload: { property: 'notes', value: evt.target.value }
                 })} 
-            />  
+            ></textarea>  
         <input name="link" 
                 value={specificLeague.link}
                 onChange={(evt) => dispatch({
