@@ -1,10 +1,11 @@
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory} from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 function EditPage(){
     const dispatch = useDispatch();
     const params = useParams();
+    const history = useHistory()
     const specificLeague = useSelector((store) => store.editPageReducer);
 
  
@@ -19,6 +20,11 @@ function EditPage(){
     }, [params.id]);
     // 👆 re-run the fn every time the :id changes
 
+    const backToLeaguePage = () => {
+        history.push(`/league/${specificLeague.id}`);
+      };
+
+
     const onSubmit = (evt) => {
         evt.preventDefault();
         dispatch({
@@ -30,6 +36,7 @@ function EditPage(){
 
     return(
         <>
+        <button onClick={() => backToLeaguePage()}> Back to League Page </button>
             <h1> League: {specificLeague.league_city_name}</h1>
             <form onSubmit={onSubmit}>
             <input

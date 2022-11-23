@@ -60,12 +60,12 @@ function App() {
           <Route exact path = "/league/:id">
             <LeaguePage/>
           </Route>
-          <Route 
+          <ProtectedRoute 
                     exact
                     path="/league/:id/edit"
                 >
                     <EditPage />
-                </Route>
+                </ProtectedRoute>
 
           <Route exact path = "/results">
             <ResultsPage/>

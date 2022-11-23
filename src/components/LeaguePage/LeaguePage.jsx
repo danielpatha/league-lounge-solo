@@ -1,14 +1,13 @@
-
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import {useHistory} from 'react-router-dom'
-import { useParams } from 'react-router-dom';
+import {useHistory, useParams} from 'react-router-dom'
 
 
 function LeaguePage() {
     const history = useHistory()
     const dispatch = useDispatch();
     const params = useParams();
+    const user = useSelector(store => store.user);
     const specificLeague = useSelector((store) => store.leaguePageReducer);
     const backToHome = () => {
       history.push("/");
@@ -75,8 +74,21 @@ console.log(specificLeague.co_ed)
         <p>Notes: {specificLeague.notes}</p>
         <a href={specificLeague.link} target = "_blank" rel="noopener noreferrer">{specificLeague.link}</a>
 
-        <button onClick={() => onDelete()}>Delete</button>
-        <button onClick={() => onEdit()}>Edit</button>
+
+        {user.id ?
+        <>
+            
+              <button onClick={() => onDelete()}>Delete</button>
+              <button onClick={() => onEdit()}>Edit</button>
+              </>
+              
+              :
+              // Otherwise, show the registration page
+            <>
+            
+            </>
+            }
+
         </div>
         </div>
       </div>
