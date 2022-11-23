@@ -33,8 +33,8 @@ const router = express.Router();
  router.put('/:id', (req, res) => {
     // Update this single student
     const idToUpdate = req.params.id;
-    const sqlText = `UPDATE league SET league_city_name = $1 WHERE id = $2`;
-    pool.query(sqlText, [req.body.league_city_name, idToUpdate])
+    const sqlText = `UPDATE league SET league_city_name = $1, address = $2, sport = $3, competitive_level = $4, season = $5, day_of_the_week = $6, time_of_day = $7, co_ed = $8, notes = $9, link = $10, photo = $11 WHERE id = $12;`;
+    pool.query(sqlText, [req.body.league_city_name, req.body.address, req.body.sport, req.body.competitive_level, req.body.season, req.body.day_of_the_week, req.body.time_of_day, req.body.co_ed, req.body.notes, req.body.link, req.body.photo, idToUpdate])
         .then((result) => {
             res.sendStatus(200);
         })
@@ -47,10 +47,9 @@ const router = express.Router();
 // POST students
 router.post('/', (req, res) => {
     console.log(req.body);
-    const newLeague = req.body.league_city_name;
-    const sqlText = `INSERT INTO students (league_city__name) VALUES ($1)`;
+    const sqlText = `INSERT INTO league (league_city__name, address, sport, competitive_level, season, day_of_the_week, time_of_day, co_ed, notes, link, photo) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11);`;
 
-    pool.query(sqlText, [newLeague])
+    pool.query(sqlText, [req.body.league_city_name, req.body.address, req.body.sport, req.body.competitive_level, req.body.season, req.body.day_of_the_week, req.body.time_of_day, req.body.co_ed, req.body.notes, req.body.link, req.body.photo])
         .then((result) => {
             res.sendStatus(201);
         })
