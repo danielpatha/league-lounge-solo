@@ -1,15 +1,33 @@
-
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import {useHistory} from 'react-router-dom'
-import { useParams } from 'react-router-dom';
+import {useHistory, useParams} from 'react-router-dom'
+import {LinkedinIcon, 
+  LinkedinShareButton,
+  EmailIcon, 
+  EmailShareButton, 
+  FacebookMessengerIcon, 
+  FacebookMessengerShareButton,
+  FacebookIcon, 
+  FacebookShareButton,
+   TwitterIcon, 
+   TwitterShareButton,
+   RedditShareButton,
+   RedditIcon,
+} from "react-share";
+
+import "./LeaguePage.css"
 
 
 function LeaguePage() {
     const history = useHistory()
     const dispatch = useDispatch();
     const params = useParams();
+    const user = useSelector(store => store.user);
     const specificLeague = useSelector((store) => store.leaguePageReducer);
+
+    const shareUrl = (specificLeague.link);
+    const title = 'Checkout this league!';
+
     const backToHome = () => {
       history.push("/");
     };
@@ -48,6 +66,7 @@ function onEdit(){
 
 
 
+
 console.log(specificLeague.co_ed)
   
 
@@ -75,10 +94,79 @@ console.log(specificLeague.co_ed)
         <p>Notes: {specificLeague.notes}</p>
         <a href={specificLeague.link} target = "_blank" rel="noopener noreferrer">{specificLeague.link}</a>
 
-        <button onClick={() => onDelete()}>Delete</button>
-        <button onClick={() => onEdit()}>Edit</button>
+    
+
+        {/* All the SHARE buttons */}
+        <div className = "flex-container">
+
+        <h2> Share this league to others! </h2>
+        <br></br>
+        <div className = "flex-item">
+        <FacebookShareButton
+            url={shareUrl}
+            quote={title}
+            
+          >
+            <FacebookIcon size={32} round />
+          </FacebookShareButton>
+          </div>
+          <div className="flex-item">
+          <EmailShareButton
+            url={shareUrl}
+            subject={title}
+            body="body"
+          >
+            <EmailIcon size={32} round />
+          </EmailShareButton>
+          </div>
+
+        <div className = "flex-item">
+          <LinkedinShareButton url={shareUrl} summary = {"Checkout this League! You down?"} className="Demo__some-network__share-button">
+            <LinkedinIcon size={32} round />
+          </LinkedinShareButton>
+        </div>
+
+        <div className = "flex-item">
+          <TwitterShareButton url={shareUrl} summary = {"Checkout this League! You down?"} className="Demo__some-network__share-button">
+            <TwitterIcon size={32} round />
+          </TwitterShareButton>
+        </div>
+
+        <div>
+          <FacebookMessengerShareButton
+            url={shareUrl}
+            appId="521270401588372"
+            className="flex-item"
+          >
+            <FacebookMessengerIcon size={32} round />
+          </FacebookMessengerShareButton>
+        </div>
+
+        <div className = "flex-item">
+          <RedditShareButton url={shareUrl} summary = {"Checkout this League! You down?"} className="Demo__some-network__share-button">
+            <RedditIcon size={32} round />
+          </RedditShareButton>
+        </div>
+
+
+
+        {user.id ?
+        <>
+            
+              <button onClick={() => onDelete()}>Delete</button>
+              <button onClick={() => onEdit()}>Edit</button>
+              </>
+              
+              :
+              // Otherwise, show the registration page
+            <>
+            
+            </>
+            }
+
         </div>
         </div>
+      </div>
       </div>
     );
   }

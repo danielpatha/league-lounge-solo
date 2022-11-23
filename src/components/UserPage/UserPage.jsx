@@ -20,9 +20,18 @@ function UserPage() {
   const [link, setLink] = useState("")
   const [photo, setPhoto] = useState("")
 
+  function autofill(){
+   setCity('St.Paul');
+   setAddress('1151 Jessamine Ave W, St Paul, MN 55103');
+   setNotes('The City of Saint Paul offers Mens, Womens and Co-Rec Broomball. Registration begins in November. League play for all teams begins in late December and runs through early February, weather permitting. Teams can elect to participate in a postseason double-elimination tournament for an extra fee. All games are played at McMurray Fields.');
+   setLink('https://www.stpaul.gov/departments/parks-and-recreation/athletics/adult-athletics/adult-broomball');
+   setPhoto('https://cdn.minnesotamonthly.com/wp-content/uploads/sites/85/2018/12/mm-2019-01_True-North_Broomball_G20copy.jpg')
+
+  }
+
   return (
     <>
-    <h2>Welcome, {user.username}!</h2>
+    <h2 onClick= {autofill} >Welcome, {user.username}!</h2>
 
     <div className="usercontainer">
        {/* <h3 className = 'flex-item1' >Favorites</h3> */}
@@ -43,9 +52,9 @@ function UserPage() {
       
        <input name="time_of_day" list = "time" type="text" value={time} placeholder="Time of Day" onChange={(e) => setTime(e.target.value)} />
       
-        <input name="co_ed" list = "co_ed" type="text" value={co_ed} placeholder="Co-Ed?" onChange={(e) => setCo_ed(e.target.value)} />
+        <input name="co_ed" list = "co_ed" type="text" value={co_ed} placeholder="Co-Ed Available?" onChange={(e) => setCo_ed(e.target.value)} />
       
-        <input name="notes" className = "notes"  type="text" value={notes} placeholder="Notes" onChange={(e) => setNotes(e.target.value)} /> 
+        <textarea name="notes" className = "notes"  type="text" value={notes} placeholder="Notes" onChange={(e) => setNotes(e.target.value)} ></textarea>
 
         <input name="link" className = "link"  type="text" value={link} placeholder="Link" onChange={(e) => setLink(e.target.value)} />
 
