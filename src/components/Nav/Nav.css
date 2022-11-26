@@ -5,7 +5,7 @@
   align-items: center;
 
   margin: 0 0 30px;
-  background-color: #121212;
+  background-color:#000000;
   overflow: hidden;
 }
 
@@ -23,14 +23,14 @@
 }
 
 .navLink {
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Tourney', cursive;
   display: inline-block;
-  color: #f6f2f2;
-  background-color: #121212;
+  color: #F3EFE0;
+  background-color: #000000;
   text-align: center;
   padding: 24px 10px;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 17px;
 
   /* these last two make the logout button in
   the nav bar look like another link */
@@ -40,5 +40,5 @@
 }
 
 .navLink:hover {
-  background-color: #008183;
+  background-color: #F3EFE0;
 }

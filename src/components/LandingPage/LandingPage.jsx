@@ -37,19 +37,22 @@ function  getLeague(league){
 
   return (
     <div className="container">
+
+      <div className = "headerForm"> 
       <h2>Find a Local League</h2>
-
-      <div className="grid">
-        <div className="grid-col grid-col_8">
          <LeagueForm/>
+         </div> 
 
-    <h3>Newly Added Leagues</h3>
 
-    <section className='flex-container'>
+
+
+    <h2>Newly Added Leagues</h2>
+
+    <section className='grid-container'>
         
         {leagueStore.map(league => {
             return(
-                <div className = 'flex-item' key = {league.id}>
+                <div className = 'grid-item' key = {league.id}>
                   <h4>League/City Name: {league.league_city_name} </h4>
                   
                   
@@ -58,6 +61,7 @@ function  getLeague(league){
                   <p>Day:{league.day_of_the_week}</p>
 
                   <img src={league.photo} />
+                  <br></br>
                   <button onClick={() => getLeague(league)}> Click For More Information</button>         
                   </div> 
             )
@@ -67,8 +71,8 @@ function  getLeague(league){
 
       </section>
    
-        </div>
-        <div className="grid-col grid-col_4">
+      
+        
           {/* Original Stuff */}
           {/* <RegisterForm /> */}
             
@@ -79,8 +83,8 @@ function  getLeague(league){
             </button>
           </center> */}
         </div>
-      </div>
-    </div>
+    
+    
   );
 }
 
