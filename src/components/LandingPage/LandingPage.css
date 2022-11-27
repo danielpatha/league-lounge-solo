@@ -1,22 +1,29 @@
-html *{
- font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
- color: white;
- background-color: black;
+.container{
+ 
+
+ background-color: #E7E5DF;
 }
 
 img{
   width: 200px;
+  height: 150px;
 }
 .grid-container{
+  color:black;
   display: flex;
   justify-content: space-around;
   align-content: flex-end;
   flex-wrap: nowrap;
   flex-direction: row;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .headerForm{
   text-align: center;
+}
+
+.header2{
+  margin-left: 290px;
 }
 
 input{
@@ -25,10 +32,20 @@ input{
 }
 
 .grid-item{
-  border-color: #97FB57;
+  border-style: groove;
+  border-color:#7FEFBD;
   border-width: 10px;
+  background-color: black;
+  color: #E7E5DF;
 }
 
+.header2{
+  color: #393E41;
+  font-family: 'Righteous', cursive;
+  font-size:30px;
+  background-color: white;
+  width: 800px;
+}
 
 
 

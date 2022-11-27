@@ -39,14 +39,14 @@ function  getLeague(league){
     <div className="container">
 
       <div className = "headerForm"> 
-      <h2>Find a Local League</h2>
+      <h2 className = "header2">Find a Local League</h2>
          <LeagueForm/>
          </div> 
 
 
 
 
-    <h2>Newly Added Leagues</h2>
+    <h2 className = "header2">Newly Added Leagues</h2>
 
     <section className='grid-container'>
         
@@ -55,9 +55,10 @@ function  getLeague(league){
                 <div className = 'grid-item' key = {league.id}>
                   <h4>League/City Name: {league.league_city_name} </h4>
                   
+                  <h5>Sport:{league.sport}</h5> 
                   
-                  <h5>Address: {league.address}</h5>
-                  <h6>Sport:{league.sport}</h6> 
+                  <h5> Competitive Level: {league.competitive_level}</h5>
+                  
                   <p>Day:{league.day_of_the_week}</p>
 
                   <img src={league.photo} />

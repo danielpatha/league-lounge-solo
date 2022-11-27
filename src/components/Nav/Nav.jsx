@@ -32,7 +32,7 @@ function Nav() {
 
 
       <Link to="/home">
-        <img src = "ML.png" className='nav_title'></img>
+        <img className = "image" src = "ML.png"></img>
       </Link>
 
       <Link className="navLink" to="/about">
