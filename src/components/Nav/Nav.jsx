@@ -11,7 +11,7 @@ function Nav() {
     <div className="nav">
 
 <Link className="navLink" to="/home">
-              HOME
+              Home
             </Link>
 
         {/* ORIGINAL */}
@@ -20,7 +20,7 @@ function Nav() {
         {user.id && (
           <>
       <Link className="navLink" to="/user">
-        ADMIN ACCOUNT
+        Admin Account
         </Link>    
           </>
         )}
@@ -32,11 +32,11 @@ function Nav() {
 
 
       <Link to="/home">
-        <h2 className="nav-title">MINNELEAGUES</h2>
+        <img className = "image" src = "ML.png"></img>
       </Link>
 
       <Link className="navLink" to="/about">
-          ABOUT 
+          About
         </Link>
      
        <div> 
@@ -45,7 +45,7 @@ function Nav() {
          {!user.id && ( 
             // If there's no user, show login/registration links
           <Link className="navLink" to="/login">
-          ADMIN LOGIN
+          Admin Login
          </Link>
          )} 
 

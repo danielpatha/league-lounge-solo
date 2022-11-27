@@ -11,6 +11,7 @@ function ResultsPage (){
             <h1> Results </h1>
             
             <ul>
+        {results.length === 0 && (<p> Sorry, we couldn't find leagues matching that criteria.</p>)}
         {results.map(league => {
             console.log(league);
           return (

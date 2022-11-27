@@ -1,97 +1,54 @@
+.container{
+ 
+
+ background-color: #E7E5DF;
+}
+
 img{
   width: 200px;
+  height: 150px;
 }
-.flex-container{
+.grid-container{
+  color:black;
   display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  align-content: flex-start;
-}
-
-
-
-
-
-
-
-/* --------------------------------------------------------------------------------
-Grid
--------------------------------------------------------------------------------- */
-
-.grid {
-  display: flex;
-  flex: 0 1 auto;
-  /* defaults to 'row' */
+  justify-content: space-around;
+  align-content: flex-end;
+  flex-wrap: nowrap;
   flex-direction: row;
-  flex-wrap: wrap;
-  /* defaults to 'flex-start' */
-  justify-content: flex-start;
-  align-items: flex-start;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.grid-col {
-  flex: 0 0 auto;
-  padding: 0 0.5rem 0.5rem;
-  box-sizing: border-box;
+.headerForm{
+  text-align: center;
 }
 
-.grid-col_1 {
-  flex-basis: 8.33333333%;
-  max-width: 8.33333333%;
+.header2{
+  margin-left: 290px;
 }
 
-.grid-col_2 {
-  flex-basis: 16.66666667%;
-  max-width: 16.66666667%;
+input{
+   width: 150px;
+   height:30px;
 }
 
-.grid-col_3 {
-  flex-basis: 25%;
-  max-width: 25%;
+.grid-item{
+  border-style: groove;
+  border-color:#7FEFBD;
+  border-width: 10px;
+  background-color: black;
+  color: #E7E5DF;
 }
 
-.grid-col_4 {
-  flex-basis: 33.33333333%;
-  max-width: 33.33333333%;
+.header2{
+  color: #393E41;
+  font-family: 'Righteous', cursive;
+  font-size:30px;
+  background-color: white;
+  width: 800px;
 }
 
-.grid-col_5 {
-  flex-basis: 41.66666667%;
-  max-width: 41.66666667%;
-}
 
-.grid-col_6 {
-  flex-basis: 50%;
-  max-width: 50%;
-}
 
-.grid-col_7 {
-  flex-basis: 58.33333333%;
-  max-width: 58.33333333%;
-}
 
-.grid-col_8 {
-  flex-basis: 66.66666667%;
-  max-width: 66.66666667%;
-}
 
-.grid-col_9 {
-  flex-basis: 75%;
-  max-width: 75%;
-}
 
-.grid-col_10 {
-  flex-basis: 83.33333333%;
-  max-width: 83.33333333%;
-}
-
-.grid-col_11 {
-  flex-basis: 91.66666667%;
-  max-width: 91.66666667%;
-}
-
-.grid-col_12 {
-  flex-basis: 100%;
-  max-width: 100%;
-}
