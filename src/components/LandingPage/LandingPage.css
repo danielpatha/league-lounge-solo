@@ -1,7 +1,33 @@
 .container{
- 
-
  background-color: #E7E5DF;
+}
+
+
+button:hover{
+  cursor: pointer;
+}
+
+button{
+  background-color: white;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  border: none;
+  color: #393E41;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 30px;
+  display: inline-block;
+  font-size: 13px;
+}
+
+button:hover {
+  font-style: italic;
+  background-color:#7FEFBD;
+}
+
+button:active {
+  color: red;
 }
 
 img{
@@ -33,10 +59,12 @@ input{
 
 .grid-item{
   border-style: groove;
-  border-color:#7FEFBD;
+  border-color:#2B7869;
   border-width: 10px;
   background-color: black;
   color: #E7E5DF;
+  text-align: center;
+  padding: 5px 20px 10px;
 }
 
 .header2{
