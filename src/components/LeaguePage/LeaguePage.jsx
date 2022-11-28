@@ -75,7 +75,7 @@ console.log(specificLeague.co_ed)
     return (
       <div className="container">
         <div>
-          <button onClick={() => backToHome()}> Back to Results </button>
+          <button onClick={() => backToHome()}> Back </button>
           <h2>League Page</h2>
           {/* display photo, title and description */}
           

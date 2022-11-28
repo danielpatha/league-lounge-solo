@@ -1,3 +1,14 @@
+
+.userHeader{
+    color: #393E41;
+    font-family: 'Righteous', cursive;
+    font-size:30px;
+    background-color: white;
+    width: 250px;
+   
+  }
+
+
 .usercontainer{
     display: flex;
     justify-content: space-between;
@@ -6,10 +17,16 @@
 
 .div{
     background-color: #E7E5DF;
+    padding-bottom: 20px;
+    
     
 }
 
 .notes{
     width: 300px;
     height: 100px;
+}
+.new{
+    padding-left: 250px;
+    color:#393E41;
 }

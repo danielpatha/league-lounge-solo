@@ -1,0 +1,40 @@
+.formPanel{
+    background-color:#E7E5DF;
+}
+
+.adminHeader{
+    color: #393E41;
+    font-family: 'Righteous', cursive;
+    font-size:30px;
+    background-color: white;
+    width: 250px;
+}
+
+.btn{
+    background-color: #7FEFBD;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    border: none;
+    color: #393E41;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 30px;
+    display: inline-block;
+    font-size: 13px;
+}
+
+.btn:hover {
+    font-style: italic;
+    background-color:#7FEFBD;
+  }
+  
+.btn:active {
+    color: red;
+  }
+
+.loginInput{
+border: 3px solid #7FEFBD;
+border-radius: 10px;
+  
+}

@@ -83,53 +83,45 @@ function LeagueForm(){
 
     return(
         <div>
-        <form>
+        <form onSubmit = {onSubmitSport}>
         <label htmlFor="sport">
           Look up by sport:
 
-        <input name = "sport" className = "sportInput" value = {sport} onChange={(evt) => handleChangeSport(evt)} placeholder ="Sports ⬇" list = "sports"/>
+        <input required name = "sport" className = "sportInput" value = {sport} onChange={(evt) => handleChangeSport(evt)} placeholder ="Sports" list = "sports"/>
 
-         {/* <input placeholder="Competitive Level ⬇" list = "levels"></input>
-        <br></br> */}
-        {/* <input placeholder="Season ⬇" list = "season"></input>
-        <input placeholder="Day of the Week ⬇" list = "day"></input>
-        <input placeholder="Time of Day ⬇" list = "time"></input>
-        <input placeholder="Co-Ed ⬇" list="co-ed"></input>  */}
-
-
-<button className ="submit" onClick={() => onSubmitSport()}>search</button>
+<button className ="submit">search</button>
 </label>
 </form>
 
-<form>
+<form onSubmit = {onSubmitLevel}>
 <label htmlFor="comp">
           Look up by competitive level:
-<input className = "sportInput" name ="comp" value = {level} onChange={(evt) => handleChangeComp(evt)} placeholder="Competitive Levels ⬇" list = "levels"></input>
+<input required className = "sportInput" name ="comp" value = {level} onChange={(evt) => handleChangeComp(evt)} placeholder="Competitive Levels" list = "levels"></input>
 
-<button className ="submit" onClick={() => onSubmitLevel()}>search</button>
+<button className ="submit">search</button>
 </label>
 </form>
 
-<form>
+<form onSubmit={onSubmitDay}>
 <label htmlFor="day">
           Look up by day of the week:
-<input className = "sportInput" name = "day" value = {day} onChange={(evt) => handleChangeDay(evt)} placeholder="Days of the Week⬇" list = "day"></input>
+<input required className = "sportInput" name = "day" value = {day} onChange={(evt) => handleChangeDay(evt)} placeholder="Days of the Week" list = "day"></input>
 
-<button className ="submit" onClick={() => onSubmitDay()}>submit</button>
+<button className ="submit">search</button>
 </label>
 </form>
 
 <br></br>
-<form>
+<form onSubmit={onSubmitMul}>
 <label htmlFor="all">
           Look up by multiple fields:
-          <input name = "sport" className = "sportInput" value = {sportMul} onChange={(evt) => handleChangeSportMul(evt)} placeholder ="Sports ⬇" list = "sports"/>
+          <input required name = "sport" className = "sportInput" value = {sportMul} onChange={(evt) => handleChangeSportMul(evt)} placeholder ="Sports" list = "sports"/>
 
-          <input className = "sportInput" name ="comp" value = {levelMul} onChange={(evt) => handleChangeCompMul(evt)} placeholder="Competitive Levels ⬇" list = "levels"></input>
+          <input  required className = "sportInput" name ="comp" value = {levelMul} onChange={(evt) => handleChangeCompMul(evt)} placeholder="Competitive Levels" list = "levels"></input>
           
-          <input className = "sportInput" name = "all" value = {dayMul} onChange={(evt) => handleChangeDayMul(evt)} placeholder="Days of the Week⬇" list = "day"></input>
+          <input required className = "sportInput" name = "all" value = {dayMul} onChange={(evt) => handleChangeDayMul(evt)} placeholder="Days of the Week" list = "day"></input>
 
-<button className ="submit" onClick={() => onSubmitMul()}>submit</button>
+<button className ="submit">submit</button>
 </label>
 </form>
 
