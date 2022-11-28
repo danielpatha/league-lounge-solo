@@ -58,7 +58,6 @@ function AdminLeaguePage() {
           
         <div key={specificLeague.id}> 
         <img src={specificLeague.photo}/>
-        <h2>{specificLeague.address}</h2>
         <h4>{specificLeague.sport}</h4>
         <p>{specificLeague.notes}</p>
         <a href={specificLeague.link}>{specificLeague.link}</a>

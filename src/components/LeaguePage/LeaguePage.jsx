@@ -29,7 +29,7 @@ function LeaguePage() {
     const title = 'Checkout this league!';
 
     const backToHome = () => {
-      history.push("/");
+      history.push("/results");
     };
  console.log("Specific league",specificLeague);
 
@@ -75,14 +75,12 @@ console.log(specificLeague.co_ed)
     return (
       <div className="container">
         <div>
-          <button onClick={() => backToHome()}> Back to Home </button>
+          <button onClick={() => backToHome()}> Back to Results </button>
           <h2>League Page</h2>
           {/* display photo, title and description */}
           
         <div key={specificLeague.id}> 
         <img src={specificLeague.photo}/>
-        <h2>Address:</h2>
-           <p>{specificLeague.address}</p>
            <h3>Co-Ed: {String(specificLeague.co_ed) }</h3>
         <h2>Sport: {specificLeague.sport}</h2>
         <h2>Competitive Level: {specificLeague.competitive_level}</h2>

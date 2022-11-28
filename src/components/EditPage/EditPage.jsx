@@ -1,6 +1,7 @@
 import { useParams, useHistory} from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import "./EditPage.css";
 
 function EditPage(){
     const dispatch = useDispatch();
@@ -35,7 +36,7 @@ function EditPage(){
     
 
     return(
-        <>
+        <div className = "editDiv">
         <button onClick={() => backToLeaguePage()}> Back to League Page </button>
             <h1> League: {specificLeague.league_city_name}</h1>
             <form onSubmit={onSubmit}>
@@ -44,14 +45,6 @@ function EditPage(){
                 onChange={(evt) => dispatch({
                     type: 'UPDATE_EDIT_LEAGUE',
                     payload: { property: 'league_city_name', value: evt.target.value }
-                })}
-            />
-
-            <input
-                value={specificLeague.address}
-                onChange={(evt) => dispatch({
-                    type: 'UPDATE_EDIT_LEAGUE',
-                    payload: { property: 'address', value: evt.target.value }
                 })}
             />
 
@@ -105,15 +98,6 @@ function EditPage(){
                     payload: { property: 'co_ed', value: evt.target.value }
                 })} 
             />  
-
-        <input name="co_ed" list = 'co_ed'
-                value={specificLeague.co_ed}
-                onChange={(evt) => dispatch({
-                    type: 'UPDATE_EDIT_LEAGUE',
-                    payload: { property: 'co_ed', value: evt.target.value }
-                })} 
-            />  
-
 
         <textarea name="notes" 
                 value={specificLeague.notes}
@@ -205,7 +189,7 @@ function EditPage(){
 </datalist>   
 
 
-        </>
+</div>
 
     )
 }

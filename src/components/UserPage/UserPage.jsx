@@ -9,7 +9,6 @@ function UserPage() {
   const dispatch = useDispatch();
   //const specificLeague = useSelector((store) => store.leaguePageReducer);
   const [league_city, setCity] = useState("")
-  const [address, setAddress] = useState("")
   const [sport, setSport] = useState("")
   const [comp, setComp] = useState("")
   const [season, setSeason] = useState("")
@@ -22,7 +21,6 @@ function UserPage() {
 
   function autofill(){
    setCity('St.Paul');
-   setAddress('1151 Jessamine Ave W, St Paul, MN 55103');
    setNotes('The City of Saint Paul offers Mens, Womens and Co-Rec Broomball. Registration begins in November. League play for all teams begins in late December and runs through early February, weather permitting. Teams can elect to participate in a postseason double-elimination tournament for an extra fee. All games are played at McMurray Fields.');
    setLink('https://www.stpaul.gov/departments/parks-and-recreation/athletics/adult-athletics/adult-broomball');
    setPhoto('https://cdn.minnesotamonthly.com/wp-content/uploads/sites/85/2018/12/mm-2019-01_True-North_Broomball_G20copy.jpg')
@@ -30,8 +28,10 @@ function UserPage() {
   }
 
   return (
-    <>
+    <div className = 'div'>
     <h2 onClick= {autofill} >Welcome, {user.username}!</h2>
+
+    <h5>Add a new league here!</h5>
 
     <div className="usercontainer">
        {/* <h3 className = 'flex-item1' >Favorites</h3> */}
@@ -39,8 +39,6 @@ function UserPage() {
       <form>
    
       <input name="league_city_name" type="text" value={league_city} placeholder="League City/Name" onChange={(e) => setCity(e.target.value)} />
-      
-      <input name="address" type="text" value={address} placeholder="League Address" onChange={(e) => setAddress(e.target.value)} />
       
       <input name="sport" list = "sport" type="text" value={sport} placeholder="League Sport" onChange={(e) => setSport(e.target.value)} />
       
@@ -65,7 +63,6 @@ function UserPage() {
           type: 'ADD_LEAGUE',
           payload: {
             league_city_name: league_city,
-            address: address,
             sport: sport,
             competitive_level: comp,
             season: season,
@@ -80,7 +77,6 @@ function UserPage() {
       //Clear the form
       setCity("")
       setSport("")
-      setAddress("")
       setComp("");
       setSeason("");
       setDay("");
@@ -152,7 +148,7 @@ function UserPage() {
       {/* <p>Your ID is: {user.id}</p>
       <LogOutButton className="btn" /> */}
     </div>
-    </>
+    </div>
   );
 }
 

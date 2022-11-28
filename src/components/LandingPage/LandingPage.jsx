@@ -55,15 +55,15 @@ function  getLeague(league){
                 <div className = 'grid-item' key = {league.id}>
                   <h4>League/City Name: {league.league_city_name} </h4>
                   
-                  <h5>Sport:{league.sport}</h5> 
+                  <p>SPORT:       {league.sport}</p> 
                   
-                  <h5> Competitive Level: {league.competitive_level}</h5>
+                  <p> COMPETITIVE LEVEL:   {league.competitive_level}</p>
                   
-                  <p>Day:{league.day_of_the_week}</p>
+                  <p>DAY:    {league.day_of_the_week}</p>
 
                   <img src={league.photo} />
                   <br></br>
-                  <button onClick={() => getLeague(league)}> Click For More Information</button>         
+                  <button className = "moreInfo" onClick={() => getLeague(league)}> click to learn more!</button>         
                   </div> 
             )
 

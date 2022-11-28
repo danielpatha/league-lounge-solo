@@ -1,7 +1,11 @@
-.flexContainer{
-    display:flex;
-    justify-content:space-between;
-    
-    background-color: blanchedalmond;
-    width: 200px;
-}
+.grid-item1{
+    border-style: groove;
+    border-color:#7FEFBD;
+    border-width: 10px;
+    background-color: black;
+    color: #E7E5DF;
+    text-align: center;
+    padding: 5px 100px 10px;
+  }
+
+
