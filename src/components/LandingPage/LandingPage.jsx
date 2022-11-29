@@ -53,7 +53,7 @@ function  getLeague(league){
         {leagueStore.map(league => {
             return(
                 <div className = 'grid-item' key = {league.id}>
-                  <h4>League/City Name: {league.league_city_name} </h4>
+                  <h4> {league.league_city_name} </h4>
                   
                   <p>SPORT:       {league.sport}</p> 
                   

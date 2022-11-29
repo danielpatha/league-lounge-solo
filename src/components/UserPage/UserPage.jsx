@@ -21,7 +21,7 @@ function UserPage() {
 
   function autofill(){
    setCity('St.Paul');
-   setNotes('The City of Saint Paul offers Mens, Womens and Co-Rec Broomball. Registration begins in November. League play for all teams begins in late December and runs through early February, weather permitting. Teams can elect to participate in a postseason double-elimination tournament for an extra fee. All games are played at McMurray Fields.');
+   setNotes('The City of Saint Paul offers Co-Rec Broomball. Registration begins in November. League play for all teams begins in late December and runs through early February, weather permitting. Teams can elect to participate in a postseason double-elimination tournament for an extra fee. All games are played at McMurray Fields.');
    setLink('https://www.stpaul.gov/departments/parks-and-recreation/athletics/adult-athletics/adult-broomball');
    setPhoto('https://cdn.minnesotamonthly.com/wp-content/uploads/sites/85/2018/12/mm-2019-01_True-North_Broomball_G20copy.jpg')
 
@@ -93,17 +93,15 @@ function UserPage() {
       
       <datalist id="sport" multiple>
 <option value="Basketball"></option>
-<option value="Bowling"></option>
 <option value="Broomball"></option>
 <option value="Cornhole/Bags"></option>
 <option value="Dodgeball"></option>
 <option value="Flag Football"></option>
-<option value="Golf"></option>
+<option value="Hockey"></option>
 <option value="Kickball"></option>
 <option value="Pickleball"></option>
 <option value="Soccer"></option>
 <option value="Softball"></option>
-<option value="Tennis"></option>
 <option value="Ultimate Frisbee"></option>
 <option value="Volleyball"></option>
 </datalist>

@@ -74,7 +74,8 @@ function EditPage(){
                     payload: { property: 'season', value: evt.target.value }
                 })} 
             /> 
-
+        <br></br>
+        <br></br>
         <input name="day" list = 'day'
                 value={specificLeague.day_of_the_week}
                 onChange={(evt) => dispatch({
@@ -98,8 +99,10 @@ function EditPage(){
                     payload: { property: 'co_ed', value: evt.target.value }
                 })} 
             />  
+        <br></br>
+        <br></br>
 
-        <textarea name="notes" 
+        <textarea className = "notes" name="notes" 
                 value={specificLeague.notes}
                 onChange={(evt) => dispatch({
                     type: 'UPDATE_EDIT_LEAGUE',

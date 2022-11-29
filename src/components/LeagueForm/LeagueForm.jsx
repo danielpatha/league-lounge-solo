@@ -121,7 +121,7 @@ function LeagueForm(){
           
           <input required className = "sportInput" name = "all" value = {dayMul} onChange={(evt) => handleChangeDayMul(evt)} placeholder="Days of the Week" list = "day"></input>
 
-<button className ="submit">submit</button>
+<button className ="submit">search</button>
 </label>
 </form>
 
@@ -164,12 +164,11 @@ function LeagueForm(){
 
 <datalist id="sports">
 <option value="Basketball"></option>
-<option value="Bowling"></option>
 <option value="Broomball"></option>
 <option value="Bean Bags/Corn Hole"></option>
 <option value="Dodgeball"></option>
 <option value="Flag Football"></option>
-<option value="Golf"></option>
+<option value="Hockey"></option>
 <option value="Kickball"></option>
 <option value="Pickleball"></option>
 <option value="Soccer"></option>
