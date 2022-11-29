@@ -21,7 +21,7 @@ function UserPage() {
 
   function autofill(){
    setCity('St.Paul');
-   setNotes('The City of Saint Paul offers Mens, Womens and Co-Rec Broomball. Registration begins in November. League play for all teams begins in late December and runs through early February, weather permitting. Teams can elect to participate in a postseason double-elimination tournament for an extra fee. All games are played at McMurray Fields.');
+   setNotes('The City of Saint Paul offers Co-Rec Broomball. Registration begins in November. League play for all teams begins in late December and runs through early February, weather permitting. Teams can elect to participate in a postseason double-elimination tournament for an extra fee. All games are played at McMurray Fields.');
    setLink('https://www.stpaul.gov/departments/parks-and-recreation/athletics/adult-athletics/adult-broomball');
    setPhoto('https://cdn.minnesotamonthly.com/wp-content/uploads/sites/85/2018/12/mm-2019-01_True-North_Broomball_G20copy.jpg')
 
@@ -29,9 +29,9 @@ function UserPage() {
 
   return (
     <div className = 'div'>
-    <h2 onClick= {autofill} >Welcome, {user.username}!</h2>
+    <h2 className = "userHeader" onClick= {autofill} >Welcome, {user.username}!</h2>
 
-    <h5>Add a new league here!</h5>
+    <h3 className = "new">Add a new league here!</h3>
 
     <div className="usercontainer">
        {/* <h3 className = 'flex-item1' >Favorites</h3> */}
@@ -45,13 +45,16 @@ function UserPage() {
       <input name="comp" list = "level" type="text" value={comp} placeholder="Competitive Level" onChange={(e) => setComp(e.target.value)} />
       
        <input name="season" list = "season" type="text" value={season} placeholder="Season" onChange={(e) => setSeason(e.target.value)} />
-      
+      <br></br>
+      <br></br>
+       
         <input name="day_of_the_week" list = "day" type="text" value={day} placeholder="Day of the Week" onChange={(e) => setDay(e.target.value)} />
       
        <input name="time_of_day" list = "time" type="text" value={time} placeholder="Time of Day" onChange={(e) => setTime(e.target.value)} />
       
         <input name="co_ed" list = "co_ed" type="text" value={co_ed} placeholder="Co-Ed Available?" onChange={(e) => setCo_ed(e.target.value)} />
-      
+      <br></br>
+       <br></br>
         <textarea name="notes" className = "notes"  type="text" value={notes} placeholder="Notes" onChange={(e) => setNotes(e.target.value)} ></textarea>
 
         <input name="link" className = "link"  type="text" value={link} placeholder="Link" onChange={(e) => setLink(e.target.value)} />
@@ -90,26 +93,24 @@ function UserPage() {
       
       <datalist id="sport" multiple>
 <option value="Basketball"></option>
-<option value="Bowling"></option>
 <option value="Broomball"></option>
 <option value="Cornhole/Bags"></option>
 <option value="Dodgeball"></option>
 <option value="Flag Football"></option>
-<option value="Golf"></option>
+<option value="Hockey"></option>
 <option value="Kickball"></option>
 <option value="Pickleball"></option>
 <option value="Soccer"></option>
 <option value="Softball"></option>
-<option value="Tennis"></option>
 <option value="Ultimate Frisbee"></option>
 <option value="Volleyball"></option>
 </datalist>
 
 <datalist id="level">
 <option value="Social"></option>
-<option value="Bronze/C"></option>
-<option value="Silver/B"></option>
-<option value="Gold/A"></option>
+<option value="Bronze or C"></option>
+<option value="Silver or B"></option>
+<option value="Gold or A"></option>
 </datalist>
 
 <datalist id="season">

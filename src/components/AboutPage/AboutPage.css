@@ -1,0 +1,16 @@
+.aboutHeader{
+    color: #393E41;
+    font-family: 'Righteous', cursive;
+    font-size:30px;
+    background-color: white;
+    width: 800px; 
+  }
+
+  p{
+    text-align: left;
+  }
+
+  .underline{
+    text-decoration: underline;
+
+  }

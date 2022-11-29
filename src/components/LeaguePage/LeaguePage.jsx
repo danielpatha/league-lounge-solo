@@ -74,22 +74,24 @@ console.log(specificLeague.co_ed)
     console.log("params.id",params.id)
     return (
       <div className="container">
+        
         <div>
-          <button onClick={() => backToHome()}> Back to Results </button>
-          <h2>League Page</h2>
+          <button onClick={() => backToHome()}> Back </button>
+          <h2>{specificLeague.league_city_name}</h2>
           {/* display photo, title and description */}
           
         <div key={specificLeague.id}> 
-        <img src={specificLeague.photo}/>
-           <h3>Co-Ed: {String(specificLeague.co_ed) }</h3>
-        <h2>Sport: {specificLeague.sport}</h2>
-        <h2>Competitive Level: {specificLeague.competitive_level}</h2>
-        <h2>Season: {specificLeague.season}</h2>
-        <h3>Day of the Week: {specificLeague.day_of_the_week}</h3>
-        <h3>Time of Day: {specificLeague.time_of_day}</h3>
+        <img className="leaguePhoto"src={specificLeague.photo}/>
+           
+        <h2>SPORT: {specificLeague.sport}</h2>
+        <h2>COMPETITIVE LEVEL: {specificLeague.competitive_level}</h2>
+        <h2>DAY OF THE WEEK: {specificLeague.day_of_the_week}</h2>
+        <h3>SEASON: {specificLeague.season}</h3>
+        <h3>TIME OF DAY: {specificLeague.time_of_day}</h3>
+        <h3>CO-ED: {String(specificLeague.co_ed) }</h3>
         
         
-        <p>Notes: {specificLeague.notes}</p>
+        <p>{specificLeague.notes}</p>
         <a href={specificLeague.link} target = "_blank" rel="noopener noreferrer">{specificLeague.link}</a>
 
     
