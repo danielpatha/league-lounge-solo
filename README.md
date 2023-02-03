@@ -29,8 +29,6 @@ MinneLeagues is a user-friendly directory for recreational sports leagues across
 <br></br>
 <br></br>
 <img src="public/ML5.png" >
-<br></br>
-<br></br>
 
 
 ## Built With
