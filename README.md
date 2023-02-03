@@ -1,3 +1,4 @@
+# Minneleagues
 
 ## Table of Contents
 
@@ -10,9 +11,7 @@
 
 ## Description
 
-
-Faceless Pro is a blind recruitment job board that aims to eliminate unconscious bias and discrimination against job applicants.
-It does this by concealing all personal information like name, age, race, and gender.  For example, instead of their name, applicants are given a random identifier that includes a combination of an animal and an object, like  Elephant Paper. Employers can post, delete and edit jobs. Applicants can search, save and apply for jobs. Employers and applicants have the ability to send each others messages. Lastly, applicants can reveal their identity, choosing which employers and when to do so, providing them complete control of their anonymity.
+MinneLeagues is a user-friendly directory for recreational sports leagues across the Twin-Cities and beyond! Users will be able to search for various sports leagues near them using a multitude of criteria, making the application a one stop shop for sports en. They will also be able to read information about the leagues, share it to others or themselves, and click an external link where they can sign up. Admin users have the functionality to add, edit, and delete leagues.
 
 
 ## Built With
@@ -23,9 +22,7 @@ It does this by concealing all personal information like name, age, race, and ge
 <a href="https://www.postgresql.org/"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg" height="40px" width="40px" /></a>
 <a href="https://reactjs.org/"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" height="40px" width="40px" /></a>
 <a href="https://redux.js.org/"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" height="40px" width="40px" /></a>
-<a href="https://material-ui.com/"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/materialui/materialui-original.svg" height="40px" width="40px" /></a>
 <a href="https://nodejs.org/en/"><img src="https://github.com/devicons/devicon/blob/master/icons/nodejs/nodejs-plain.svg" height="40px" width="40px" /></a>
-<a href="https://www.npmjs.com/package/multer"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--q4ySUfWB--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://thepracticaldev.s3.amazonaws.com/i/hryq136swg3qzhjsq309.png" height="40px" width="40px" /></a>
 ## Getting Started
 
 This project should be able to run in your favorite IDE. I used VS code while building it. 
@@ -45,7 +42,7 @@ Before you get started, make sure you have the following software installed on y
 5. Open VS Code (or editor of your choice) and open the folder
 6. In the terminal of VS Code run `npm install` to install all dependencies
 7.  Create a `.env` file at the root of the project and paste this line into the file:
-8. Create a database named `faceless_pro` in PostgresSQL
+8. Create a database named `minneleagues` in PostgresSQL
 If you would like to name your database something else, you will need to change `faceless_pro` to the name of your new database name in `server/modules/pool.js`
 9. The queries in the database.sql file are set up to create all the necessary tables that you need. Copy and paste those queries in the SQL query of the database. If you'd like to add dummy data in the database to test the app, you can run this command in your code editor terminal, psql -d faceless_pro -f dummyDataDump.sql, which will create a postico database using the dummyDataDump.sql file. If this is going to production, leave out the dummy data.
 10. Run `npm run server` in your VS Code terminal
