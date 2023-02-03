@@ -43,7 +43,7 @@ Before you get started, make sure you have the following software installed on y
 6. In the terminal of VS Code run `npm install` to install all dependencies
 7.  Create a `.env` file at the root of the project and paste this line into the file:
 8. Create a database named `minneleagues` in PostgresSQL
-If you would like to name your database something else, you will need to change `faceless_pro` to the name of your new database name in `server/modules/pool.js`
+If you would like to name your database something else, you will need to change `minneleagues` to the name of your new database name in `server/modules/pool.js`
 9. The queries in the database.sql file are set up to create all the necessary tables that you need. Copy and paste those queries in the SQL query of the database. If you'd like to add dummy data in the database to test the app, you can run this command in your code editor terminal, psql -d faceless_pro -f dummyDataDump.sql, which will create a postico database using the dummyDataDump.sql file. If this is going to production, leave out the dummy data.
 10. Run `npm run server` in your VS Code terminal
 11. Open a second terminal and run `npm run client`
@@ -52,7 +52,7 @@ If you would like to name your database something else, you will need to change 
 
 Once everything is installed and running it should open in your default browser - if not, navigate to http://localhost:3000/#/.
 
-Video walkthrough of application usage: https://www.youtube.com/watch?v=eA0X-KlWsqM&ab_channel=DanielPathammavong
+Application Presentation: https://youtu.be/33QU9vWbEPo
 
 ## Deployment
 - Login Credentials for Heroku have been provided in the hand off document.
