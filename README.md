@@ -1,6 +1,6 @@
 # Minneleagues
 
-<img src="ML.png" >
+<img src="public/ML.png" >
 
 ## Table of Contents
 
@@ -16,12 +16,21 @@
 MinneLeagues is a user-friendly directory for recreational sports leagues across the Twin-Cities and beyond! Users will be able to search for various sports leagues near them using a multitude of criteria, making the application a one stop shop for sports en. They will also be able to read information about the leagues, share it to others or themselves, and click an external link where they can sign up. Admin users have the functionality to add, edit, and delete leagues.
 
 ## Screenshots
-<img src="ML1.png" >
-<img src="ML2.png" >
-<img src="ML3.png" >
-<img src="ML4.png" >
-<img src="ML5.png" >
-
+<img src="public/ML1.png" >  
+<br></br>
+<br></br>
+<img src="public/ML2.png" >
+<br></br>
+<br></br>
+<img src="public/ML3.png" >
+<br></br>
+<br></br>
+<img src="public/ML4.png" >
+<br></br>
+<br></br>
+<img src="public/ML5.png" >
+<br></br>
+<br></br>
 
 
 ## Built With
