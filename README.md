@@ -13,6 +13,8 @@
 
 MinneLeagues is a user-friendly directory for recreational sports leagues across the Twin-Cities and beyond! Users will be able to search for various sports leagues near them using a multitude of criteria, making the application a one stop shop for sports en. They will also be able to read information about the leagues, share it to others or themselves, and click an external link where they can sign up. Admin users have the functionality to add, edit, and delete leagues.
 
+## Screenshots
+
 
 ## Built With
 
@@ -44,7 +46,7 @@ Before you get started, make sure you have the following software installed on y
 7.  Create a `.env` file at the root of the project and paste this line into the file:
 8. Create a database named `minneleagues` in PostgresSQL
 If you would like to name your database something else, you will need to change `minneleagues` to the name of your new database name in `server/modules/pool.js`
-9. The queries in the database.sql file are set up to create all the necessary tables that you need. Copy and paste those queries in the SQL query of the database. If you'd like to add dummy data in the database to test the app, you can run this command in your code editor terminal, psql -d faceless_pro -f dummyDataDump.sql, which will create a postico database using the dummyDataDump.sql file. If this is going to production, leave out the dummy data.
+9. The queries in the database.sql file are set up to create all the necessary tables that you need. Copy and paste those queries in the SQL query of the database. If you'd like to add dummy data in the database to test the app, you can run this command in your code editor terminal, psql -d faceless_pro -f dummyDataDump.sql, which will create a postico database using the dummyDataDump.sql file.
 10. Run `npm run server` in your VS Code terminal
 11. Open a second terminal and run `npm run client`
 
@@ -54,17 +56,3 @@ Once everything is installed and running it should open in your default browser 
 
 Application Presentation: https://youtu.be/33QU9vWbEPo
 
-## Deployment
-- Login Credentials for Heroku have been provided in the hand off document.
-- If you need make changes you wish to push to the deployed app, you must login, go into the pet-star section, go to the deploy tab, and then manually deploy. You can reconfigure this to redeploy automatically if you wish, which is on the same page.
-- Environment variables are kept on Heroku in the Settings tab, just click the Reveal Config Vars button
-- To set up the DB, we used Postico, just plug the information from Heroku into a new favorite. The Information for this can be found in the Resources tab, by clicking the Postgres add on. From there it will bring you to a new page where you will go into the settings tab and click view credentials. 
-
-- If you'd like to create new users (also a hacky way to change password) you must:
-1. Go into the user router
-1. Uncomment the route
-1. Push changes and redeploy app
-1. Register User
-1. Comment out the route back in VSCode
-1. Push changes
-1. Redeploy
