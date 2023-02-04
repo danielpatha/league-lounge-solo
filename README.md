@@ -70,6 +70,7 @@ If you would like to name your database something else, you will need to change 
 
 Once everything is installed and running it should open in your default browser - if not, navigate to http://localhost:3000/#/.
 
-Application Presentation: Click Below. <a href="https://youtu.be/33QU9vWbEPo
-" rel="video"><img src="public/ML6.png" alt="Picture of MinneLeague Presentation" /></a>
+Application Presentation: Click Below. <br>
+<a href="https://youtu.be/33QU9vWbEPo
+" rel="video"><img src="public/ML6.png" alt="Picture of MinneLeague Presentation" width = "500" height="270"/></a>
 
