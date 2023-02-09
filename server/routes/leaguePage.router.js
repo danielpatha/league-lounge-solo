@@ -3,10 +3,9 @@ const pool = require('../modules/pool');
 const router = express.Router();
 
 /**
- * GET route template
+ * GET route for details page.
  */
 router.get('/:id', (req, res) => {
-  // GET route code here
   const id = req.params.id;
   const sqlText = `SELECT *FROM "league"
   WHERE "id" = $1;`;
@@ -50,7 +49,7 @@ router.post('/', (req, res) => {
 
 
 /**
- * GET route template
+ * Delete route for the league page as the Admin user.
  */
  router.delete('/:id', (req, res) => {
   // GET route code here

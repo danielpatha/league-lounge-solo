@@ -2,9 +2,10 @@ const express = require('express');
 const pool = require('../modules/pool');
 const router = express.Router();
 
-
+/**
+ * GET Route for searching of multiple criteria on the homepage.
+ */
 router.get('/:sport/:level/:day', (req, res) => {
-  // GET route code here
   const sport= req.params.sport;
   const level= req.params.level;
   const day = req.params.day;
