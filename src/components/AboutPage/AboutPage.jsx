@@ -11,9 +11,12 @@ function AboutPage() {
     <div className="container">
       <div>
         <h2 className = "aboutHeader">About</h2>
-        <h4>MinneLeagues is a website devoted to the inner athlete and competitor in all of us. <br></br> 
-        You are able to browse all competitive levels and find leagues that fit your busy schedule.<br></br> 
-        MinneLeagues makes it possibly to find adult rec leagues that are the perfect fit across the Twin Cities and beyond! </h4>
+        <h4>MinneLeagues is a user-friendly website devoted to the inner athlete and competitor in all of us. <br></br> 
+        Here users can search adult recreational sport leagues across the Twin Cities and beyond all in one place, which streamlines the traditional process.<br></br> 
+        Users can find leagues that fir their busy schedules by searching using a multitude of criteria, like sport, competitive level, and day of the week.<br></br>  
+        Users can also read information about the leagues, share it with others or themselves, and click an external link where they can sign up.<br></br> </h4>
+
+        
 
         <h4 className = "underline">Technologies Used</h4>
         <p>HTML</p> 
