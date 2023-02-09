@@ -2,7 +2,9 @@ const express = require('express');
 const pool = require('../modules/pool');
 const router = express.Router();
 
-
+/**
+ * GET route for searching leagues by level.
+ */
 router.get('/:level', (req, res) => {
   // GET route code here
   const level = req.params.level;
