@@ -36,6 +36,9 @@ function AboutPage() {
       My girlfriend Jess for being there for me.
       And the Ramirez cohort for their support.
 
+      <h4 className = "underline"> Connect With Me Here! </h4>
+
+
        
 
       </div>
