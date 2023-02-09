@@ -36,28 +36,6 @@ return(
 
   </section>
 
-
-
-//     ???????
-//     <main className = "flex-containerResult">
-        
-//     <div className = "flexItem">
-
-//     <img src={league.photo}/>
-
-//     <h4>{league.league_city_name}</h4>
-
-//     <p> SPORT:   {league.sport} </p>
-    
-//     <p> COMPETITIVE LEVEL:    {league.competitive_level}</p>
-
-//     <p>DAY:     {league.day_of_the_week}</p>
-
-//  <button onClick={() => getLeague(league)}> Click For More Information</button>
-//     </div>
-//     </main>
-    
-
 )
 
 }

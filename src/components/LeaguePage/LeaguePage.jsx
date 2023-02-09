@@ -57,15 +57,6 @@ function onEdit(){
       });
   }, [params.id]);
 
-//    onDelete(() => {
-//     dispatch({
-//         type: 'DELETE_LEAGUE',
-//         payload: params.id
-//     });
-// }, [params.id]);
-
-
-
 
 console.log(specificLeague.co_ed)
   
