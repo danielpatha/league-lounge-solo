@@ -3,7 +3,7 @@ const pool = require('../modules/pool');
 const router = express.Router();
 
 /**
- * GET route template
+ * GET route for league edit page.
  */
  router.get('/:id', (req, res) => {
     // GET route code here
@@ -28,7 +28,7 @@ const router = express.Router();
   });
 
 /**
- * PUT route template
+ * PUT route to edit league
  */
  router.put('/:id', (req, res) => {
     // Update this single student
@@ -44,7 +44,7 @@ const router = express.Router();
         });
 });
 
-// POST students
+// POST route for adding new league.
 router.post('/', (req, res) => {
     console.log(req.body);
     const sqlText = `INSERT INTO league (league_city__name, sport, competitive_level, season, day_of_the_week, time_of_day, co_ed, notes, link, photo) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10);`;
