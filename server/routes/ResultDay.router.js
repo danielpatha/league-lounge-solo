@@ -2,7 +2,9 @@ const express = require('express');
 const pool = require('../modules/pool');
 const router = express.Router();
 
-
+/**
+ * GET route for searching leagues by day on homepeage.
+ */
 router.get('/:day', (req, res) => {
   // GET route code here
   const day = req.params.day;

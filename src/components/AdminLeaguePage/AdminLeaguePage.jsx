@@ -35,17 +35,7 @@ function AdminLeaguePage() {
       });
   }, [params.id]);
 
-//    onDelete(() => {
-//     dispatch({
-//         type: 'DELETE_LEAGUE',
-//         payload: params.id
-//     });
-// }, [params.id]);
 
-
-
-
-  
 
   
     console.log("params.id",params.id)

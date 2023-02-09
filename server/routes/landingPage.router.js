@@ -3,7 +3,7 @@ const pool = require('../modules/pool');
 const router = express.Router();
 
 /**
- * GET route template
+ * GET route for landing page
  */
 router.get('/', (req, res) => {
   // GET route code here
@@ -23,13 +23,6 @@ router.get('/', (req, res) => {
 
 });
 
-/**
- * POST route template
- */
-router.post('/', (req, res) => {
-  // POST route code here
-});
 
 module.exports = router;
 
-//This is just template for routes
